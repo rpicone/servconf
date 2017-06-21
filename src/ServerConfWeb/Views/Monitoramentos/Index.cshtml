@@ -1,0 +1,80 @@
+@model IEnumerable<ServerConfWeb.Models.Monitoramento>
+
+@{
+    ViewData["Title"] = "Monitoramentos Cadastrados";
+}
+
+<h2>Monitoramentos Cadastrados</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServidorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacketsIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacketsOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentualUsoCPU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMemoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMemoriaEmUso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TamanhoDisco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDiscoEmUso)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServidorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacketsIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacketsOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentualUsoCPU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMemoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMemoriaEmUso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TamanhoDisco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDiscoEmUso)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
